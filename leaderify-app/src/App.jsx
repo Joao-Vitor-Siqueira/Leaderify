@@ -1,11 +1,27 @@
+import RootLayout from "./components/RootLayout";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />, // This wraps your sub-pages
+    children: [{ path: "/", element: <HomePage /> }],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+]);
+
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-slate-900">
-      <h1 className="text-4xl font-bold text-sky-400 underline">
-        Hello World! Tailwind is working.
-      </h1>
-    </div>
-  )
+    <>
+      <div className="absolute w-full min-h-screen flex items-center justify-center bg-mauve-900">
+        <RouterProvider router={router} />
+      </div>
+    </>
+  );
 }
-
-export default App
+export default App;
