@@ -1,13 +1,17 @@
 import RootLayout from "./components/RootLayout";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/Home";
+import LeaderBoards from "./pages/Leaderboards";
+import LoginPage from "./pages/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />, // This wraps your sub-pages
-    children: [{ path: "/", element: <HomePage /> }],
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/leaderboards", element: <LeaderBoards /> },
+    ],
   },
   {
     path: "/login",

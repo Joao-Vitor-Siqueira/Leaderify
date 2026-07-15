@@ -1,8 +1,8 @@
-export default function LoginPage() {
+export default function Login() {
 
   return (
     <>
-      <div className="flex flex-col justify-center w-full h-screen sm:h-auto space-y-8 bg-white p-8 sm:rounded-2xl sm:max-w-md shadow-sm border border-slate-100">
+      <div className="flex flex-col justify-center w-full h-screen sm:h-auto space-y-8 bg-mauve-100 p-8 sm:rounded-2xl sm:max-w-md shadow-sm border border-slate-100">
         {/* Header */}
         <div className="text-center">
           <h2 class="mt-6 text-3xl font-bold tracking-tight text-slate-900">

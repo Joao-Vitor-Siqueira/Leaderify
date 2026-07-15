@@ -2,7 +2,7 @@ export default function ProfileButton({ userImageUrl, userName }) {
   return (
     <button
       type="button"
-      className="h-12 w-12 group relative flex rounded-full bg-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 transition-all hover:scale-105"
+      className="cursor-pointer h-12 w-12 group relative flex rounded-full bg-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 transition-all hover:scale-105"
       aria-haspopup="true"
       aria-label="User menu"
     >
