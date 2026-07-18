@@ -8,8 +8,8 @@ export default function NavItem({ text, path, onClick }) {
         to={path} 
         className= {({isActive}) => 
            isActive ? 
-           "block w-full py-2 px-3 text-2xl bg-mauve-300 transition-colors" : 
-           "block w-full py-2 px-3 text-2xl hover:bg-mauve-300 transition-colors" 
+           "block w-full py-2 px-3 text-xl bg-mauve-300 transition-colors" : 
+           "block w-full py-2 px-3 text-xl hover:bg-mauve-300 transition-colors" 
         }
       >
         {text}

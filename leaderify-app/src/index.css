@@ -4,6 +4,26 @@ body {
   margin: 0;
 }
 
+@theme {
+  --font-size-root: 20px;
+  --color-primary: var(--bg-primary);
+  --color-primary-light: var(--bg-primary-light);
+}
 
+html {
+  font-size: 125%;
+}
+
+/*default theme */
+:root {
+  --bg-primary: #2e1d30;       /* mauve-900 */
+  --bg-primary-light: #f5f3f7;
+}
+
+/* Register light theme colors */
+.light {
+  --bg-primary: #f6f3f7;       
+  --bg-primary-light: #b6a1b9;
+}
 
 

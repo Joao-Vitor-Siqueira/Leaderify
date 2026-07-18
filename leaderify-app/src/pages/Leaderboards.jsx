@@ -1,7 +1,9 @@
+import { NavLink } from 'react-router-dom'
+
 export default function LeaderBoards(){
     return (
         <>
-        LeaderBoards
+        <NavLink className="text-white" to= "/leaderboardDetails">Leaderboard Details</NavLink>
         </>
     );
 }

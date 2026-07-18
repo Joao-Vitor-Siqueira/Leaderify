@@ -1,5 +1,6 @@
 import RootLayout from "./components/RootLayout";
 import HomePage from "./pages/Home";
+import LeaderboardDetails from "./pages/LeaderboardDetails";
 import LeaderBoards from "./pages/Leaderboards";
 import LoginPage from "./pages/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -7,10 +8,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />, // This wraps your sub-pages
+    element: <RootLayout />, 
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/leaderboards", element: <LeaderBoards /> },
+      { path: "/leaderboardDetails", element: <LeaderboardDetails/>}
     ],
   },
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <div className="absolute w-full min-h-screen flex items-center justify-center bg-mauve-900">
+      <div className="absolute w-full h-screen bg-mauve-900">
         <RouterProvider router={router} />
       </div>
     </>
