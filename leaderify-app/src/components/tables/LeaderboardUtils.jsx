@@ -14,11 +14,11 @@ const iconNames = [
 export default function LeaderboardUtils() {
   return (
     <>
-      <div className="flex flex-col w-16 max-w-5xl rounded-sm bg-mauve-900 border border-mauve-500">
+      <div className="overflow-hidden h-full max-h-[75%] flex flex-col w-16 max-w-5xl rounded-sm bg-mauve-900 border border-mauve-500">
         {iconNames.map((name) => (
           <IconButton
             onClick={() => {}}
-            height={16}
+            className={"h-[12.5%] w-full"}
             iconName={name}
             iconColor={"text-white"}
             hoverColor={"hover:text-white"}

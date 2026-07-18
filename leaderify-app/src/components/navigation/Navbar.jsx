@@ -11,17 +11,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`z-50 flex flex-col fixed bottom-0 left-0 w-screen bg-mauve-100 border-t border-mauve-200 p-4 font-sans text-mauve-800 
-        transition-all duration-300 ease-in-out
-        ${isOpen ? "h-1/3" : "h-1/12"} 
+      className={`shrink-0 z-50 flex flex-col fixed bottom-0 left-0 w-screen bg-mauve-100 border-t border-mauve-200 font-sans text-mauve-800 
+        transition-all duration-300 ease-in-out ${isOpen ? "min-h-48" : "min-h-12"} 
+        ${isOpen ? "h-4/12" : "h-1/12"} 
         `}
     >
-      <div className = {`flex justify-between w-full items-center ${isOpen ? "" : "h-full"}`}>
-        <IconButton onClick={toggle} iconName={"hamburguer"} width={14} height={14}/>
-        <ProfileButton/>
+      <div className = {`flex justify-between w-full items-center pr-2 ${isOpen ? "h-1/4" : "h-full"} min-h-1/4`}>
+        <IconButton onClick={toggle} iconName={"hamburguer"} className={"h-full w-12"}/>
+        <ProfileButton className={"w-10 aspect-square"}/>
       </div>
 
-      <div className= {`${isOpen ? "" : "hidden"}`}><Divider margin={4}/></div>  
+      <div className= {`${isOpen ? "" : "hidden"}`}><Divider/></div>  
 
       <ul className= {`${isOpen ? "grow flex flex-col overflow-y-auto" : "hidden"}`}>
         <NavItem text={"Home"} path={"/"} onClick={toggle}/>

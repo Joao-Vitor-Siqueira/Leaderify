@@ -7,7 +7,7 @@ const MARGIN_MAP = {
 };
 
 export default function Divider({text, margin}) {
-  const marginClass = MARGIN_MAP[margin] || "mt-2";
+  const marginClass = MARGIN_MAP[margin] || "";
 
   return (
     <>

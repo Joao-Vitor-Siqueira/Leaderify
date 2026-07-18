@@ -1,21 +1,7 @@
 import Icon from "../utils/Icon";
 
-const widths = {
-  12: "w-12",
-  14: "w-14",
-  16: "w-16",
-};
-
-const heights = {
-  12: "h-12",
-  14: "h-14",
-  16: "h-16",
-};
-
 export default function IconButton({
   onClick,
-  width,
-  height,
   iconName,
   iconColor,
   hoverColor,
@@ -23,6 +9,7 @@ export default function IconButton({
   rounded,
   strokeWidth,
   tooltip,
+  className,
 }) {
   const classBuilder = [
     "cursor-pointer p-2 transition-colors focus:outline-none w-full h-full",
@@ -34,12 +21,11 @@ export default function IconButton({
     .filter(Boolean)
     .join(" ");
 
-  const widthClass = width ? widths[width] : "w-full";
-  const heightClass =   height ? heights[height] : "h-12";
+  const tweaks = className ?? "h-12 w-12"
 
   return (
     <>
-      <div className={`group relative inline-block ${widthClass} ${heightClass}`}>
+      <div className={`group relative inline-block ${tweaks}`}>
         <button type="button" className={classBuilder} onClick={onClick}>
           <Icon name={iconName} strokeWidth={strokeWidth} />
         </button>
