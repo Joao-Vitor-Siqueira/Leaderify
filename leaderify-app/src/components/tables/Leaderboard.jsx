@@ -21,8 +21,10 @@ export default function Leaderboard({ data }) {
   return (
     <>
       {/* Container for Leaderboard and Leaderboard utils */}
-      <div className="flex h-full w-full justify-center items-center gap-4">
-        <div className="overflow-auto h-full max-h-[90%] w-full max-w-5xl bg-mauve-100 border border-mauve-500 rounded-sm">
+      <div className="flex h-full w-full justify-center items-center gap-4 text-xs md:text-sm">
+        
+        {/* Leaderboard table */}
+        <div className="overflow-auto h-full max-h-[85%] [@media(max-height:600px)]:max-h-[75%] w-full max-w-5xl bg-mauve-100 border border-mauve-500 rounded-sm">
           <table className="text-mauve-800 w-full shadow-md">
             <thead>
               <LeaderboardHeader headers={Object.keys(placeholderData[0])} />

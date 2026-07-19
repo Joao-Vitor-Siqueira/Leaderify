@@ -14,13 +14,14 @@ const iconNames = [
 export default function LeaderboardUtils() {
   return (
     <>
-      <div className="overflow-hidden h-full max-h-[75%] flex flex-col w-16 max-w-5xl rounded-sm bg-mauve-900 border border-mauve-500">
-        {iconNames.map((name) => (
+      <div className="h-full max-h-[75%] flex flex-col w-16 max-w-5xl rounded-sm bg-mauve-900 border border-mauve-500 [@media(max-height:600px)]:overflow-scroll">
+        {iconNames.map((name,index) => (
           <IconButton
             onClick={() => {}}
-            className={"h-[12.5%] w-full"}
+            sizing={"h-[12.5%] w-full [@media(max-height:600px)]:h-10"}
             iconName={name}
             iconColor={"text-white"}
+            rounded={index == 0 ? "rounded-t-sm" : index == iconNames.length - 1 ? "rounded-b-sm" : ""}
             hoverColor={"hover:text-white"}
             bgHoverColor={"hover:bg-mauve-700"}
             strokeWidth={1}

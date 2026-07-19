@@ -9,11 +9,11 @@ export default function IconButton({
   rounded,
   strokeWidth,
   tooltip,
-  className,
+  sizing,
 }) {
-  const classBuilder = [
+  const buttonClass = [
     "cursor-pointer p-2 transition-colors focus:outline-none w-full h-full",
-    rounded && "rounded-lg",
+    rounded ? rounded : "",
     iconColor || "text-slate-600",
     hoverColor || "hover:text-slate-900",
     bgHoverColor || "hover:bg-slate-100",
@@ -21,12 +21,12 @@ export default function IconButton({
     .filter(Boolean)
     .join(" ");
 
-  const tweaks = className ?? "h-12 w-12"
+  const containerClass = `group relative inline-block ${sizing ?? "h-12 w-12"}`;
 
   return (
     <>
-      <div className={`group relative inline-block ${tweaks}`}>
-        <button type="button" className={classBuilder} onClick={onClick}>
+      <div className={containerClass}>
+        <button type="button" className={buttonClass} onClick={onClick}>
           <Icon name={iconName} strokeWidth={strokeWidth} />
         </button>
         {tooltip && (

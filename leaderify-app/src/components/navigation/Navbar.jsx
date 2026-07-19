@@ -11,13 +11,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`shrink-0 z-50 flex flex-col fixed bottom-0 left-0 w-screen bg-mauve-100 border-t border-mauve-200 font-sans text-mauve-800 
+      className={`px-2 shrink-0 z-50 flex flex-col fixed bottom-0 left-0 w-screen bg-mauve-100 border-t border-mauve-200 font-sans text-mauve-800 
         transition-all duration-300 ease-in-out ${isOpen ? "min-h-48" : "min-h-12"} 
         ${isOpen ? "h-4/12" : "h-1/12"} 
         `}
     >
       <div className = {`flex justify-between w-full items-center pr-2 ${isOpen ? "h-1/4" : "h-full"} min-h-1/4`}>
-        <IconButton onClick={toggle} iconName={"hamburguer"} className={"h-full w-12"}/>
+        <IconButton onClick={toggle} iconName={"hamburguer"} sizing={"h-full w-12"}/>
         <ProfileButton className={"w-10 aspect-square"}/>
       </div>
 
