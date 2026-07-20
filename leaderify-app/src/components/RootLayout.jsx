@@ -3,11 +3,11 @@ import Navbar from "./navigation/Navbar";
 
 export default function RootLayout() {
   return (
-    <div className="flex flex-col h-dvh w-full">
+    <div className="flex flex-col h-dvh w-full lg:flex-row">
+      <Navbar />
       <main className="flex-1 overflow-hidden max-h-11/12">
         <Outlet />
       </main>
-      <Navbar />
     </div>
   );
 }

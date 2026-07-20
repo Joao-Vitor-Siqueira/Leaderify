@@ -18,7 +18,6 @@ export default function SearchBar({}) {
             className="absolute right-3 text-slate-400 hover:text-white transition-colors focus:outline-none border rounded-full hover:cursor-pointer"
             aria-label="Clear search input"
           >
-            {/* Simple SVG X icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
