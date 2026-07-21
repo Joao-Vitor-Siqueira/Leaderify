@@ -8,10 +8,10 @@ export default function ListView({items}){
     }
     return (
         <>
-            <div className="h-full w-full max-w-[75%] max-h-[85%] [@media(max-height:700px)]:max-h-[75%] 
+            <div className="h-full w-full max-w-[75%] max-h-[85%] lg:max-h-[90%] [@media(max-height:700px)]:max-h-[75%] 
                 rounded-sm border border-mauve-500 overflow-y-auto text-sm">
                 <ul className="flex flex-col gap-2">
-                    {placeholderData.map((item,index) => <ListItem bgColor={index % 2 == 0 ? "bg-mauve-700" : "bg-mauve-600"}/>)}
+                    {placeholderData.map((item,index) => <ListItem key={index} bgColor={index % 2 == 0 ? "bg-mauve-700" : "bg-mauve-600"}/>)}
                 </ul>
             </div>
         </>
